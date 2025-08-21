@@ -1,0 +1,48 @@
+weather_data={
+   "bareilly":{
+      "temperature":30,
+      "feels_like":33,
+      "humidity":70,
+      "condition":"clear sky",
+      "wind_speed":4.5
+      },
+   "delhi":{
+      "temperature":45,
+      "feels_like":37,
+      "humidity":60,
+      "condition":"sunny",
+      "wind_speed":6.0
+      },
+   "mumbai":{
+      "temperature":40,
+      "feels_like":34,
+      "humidity":75,
+      "condition":"partly cloudy",
+      "wind_speed":4.0
+      },
+   "moradabad":{
+      "temperature":30,
+      "feels_like":74,
+      "humidity":55,
+      "condition":"partly cloudy",
+      "wind_speed":5.0
+   },
+   "agra":{
+      "temperature":60,
+      "feels_like":76,
+      "humidity":25,
+      "condition":"rainy",
+      "wind_speed":4.0
+      }
+   }
+city=input("enter city name:").lower()
+if city in weather_data:
+   info=weather_data[city]
+   print(f"\nWeather in {city.capitalize()}:")
+   print(f"Temperature: {info['temperature']}c")
+   print(f"Feels_like: {info['feels_like']}c")
+   print(f"Humidity: {info['humidity']}%")
+   print(f"Condition: {info['condition']}")
+   print(f"Wind speed: {info['wind_speed']}")
+else:
+   print("Sorry, no weather data available for this city in offline mode")
