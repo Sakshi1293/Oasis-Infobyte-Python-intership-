@@ -1,0 +1,20 @@
+def calculate_bmi(height,weight):
+   return round(weight/(height**2),2)
+def get_bmi_category(bmi):
+   if bmi<=18.5:
+      return "underweight"
+   elif 18.5 <bmi<=24.9:
+      return "Normal weight"
+   elif 25<=bmi<=29.9:
+      return "overweight"
+   else:
+      return "obese"
+def main():
+   height=float(input("Enter your height in meters"))
+   weight=float(input("Enter your weight in kg"))
+   bmi=calculate_bmi(height,weight)
+   category=get_bmi_category(bmi)
+   print(f"Your BMI is : {bmi}")
+   print(f"your weight category is: {category}")
+if __name__=="__main__":
+   main()
